@@ -1,0 +1,16 @@
+id = "synth"
+name = "Synth"
+version = "0.1.0"
+schema_version = 1
+description = "Syntax highlighting for the synth-core .synth DSL"
+authors = ["Sebastian Susnik <sebastian.susnik@winclap.com>"]
+repository = "https://github.com/sebasusnik/zed-synth"
+languages = ["languages/synth"]
+
+# Local development: Zed clones the grammar from this URL at this revision and
+# compiles it. Point `repository` at the GitHub URL once tree-sitter-synth is
+# pushed, and bump `rev` whenever the grammar changes -- Zed caches the build
+# per revision, so an unchanged rev will not pick up new work.
+[grammars.synth]
+repository = "file:///Users/sebasusnik/dev/tree-sitter-synth"
+rev = "e40e84513b93ad7be1639a011d83a9966077f44b"

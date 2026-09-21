@@ -1,0 +1,20 @@
+name = "Synth"
+grammar = "synth"
+path_suffixes = ["synth"]
+line_comments = ["# "]
+tab_size = 4
+
+# A note name carries its accidental (`C#4`, `F#`), so a double-click should
+# take the whole thing rather than stopping at the sharp.
+word_characters = ["#"]
+
+autoclose_before = ",]})>"
+
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = false },
+    { start = "(", end = ")", close = true, newline = false },
+    # `<a b c>` is a subdivision: those notes inside one step.
+    { start = "<", end = ">", close = true, newline = false, not_in = ["comment"] },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = ["comment", "string"] },
+]
