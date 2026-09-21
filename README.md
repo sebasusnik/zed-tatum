@@ -17,7 +17,7 @@ Zed has no CLI for this, so it is a two-step from inside the editor:
 1. `cmd-shift-p` → **zed: install dev extension**
 2. pick this directory (`~/dev/zed-synth`)
 
-Zed clones the grammar from the `file://` URL in `extension.toml`, compiles it,
+Zed clones the grammar from the URL in `extension.toml`, compiles it,
 and applies it to every `.synth` file straight away. After changing anything
 here, reinstall the dev extension the same way (Zed also has a **reload
 extensions** action, which is the quicker path when it is available).
@@ -60,9 +60,8 @@ is used, so `play riff` points at `pattern riff` by eye.
 
 ## Publishing
 
-To put this on the Zed extension registry: push both repos to GitHub, change
-`[grammars.synth].repository` to the tree-sitter-synth GitHub URL, then open a
-PR against [zed-industries/extensions](https://github.com/zed-industries/extensions)
+To put this on the Zed extension registry, open a PR against
+[zed-industries/extensions](https://github.com/zed-industries/extensions)
 adding this repo as a submodule and an entry in `extensions.toml`.
 
 ## License
