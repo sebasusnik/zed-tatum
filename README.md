@@ -1,7 +1,7 @@
 # zed-tatum
 
 Zed language support for **Tatum**, the language that
-[synth-core](https://github.com/sebasusnik/synth-core) plays. Songs are written
+[tatum](https://github.com/sebasusnik/tatum) plays. Songs are written
 in `.synth` files.
 
 Syntax highlighting, bracket matching, auto-indent, and an outline
