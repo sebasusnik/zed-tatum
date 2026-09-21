@@ -6,7 +6,7 @@ Zed language support for the `.synth` DSL that
 Syntax highlighting, bracket matching, auto-indent, and an outline
 (`cmd-shift-o`) of a song's modules, patterns, tracks and scenes.
 
-The parser is [tree-sitter-synth](../tree-sitter-synth). This repo is only the
+The parser is [tree-sitter-synth](https://github.com/sebasusnik/tree-sitter-synth). This repo is only the
 editor half: `extension.toml` says which grammar to build, and
 `languages/synth/` says how to colour it.
 
