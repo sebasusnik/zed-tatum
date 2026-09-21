@@ -5,7 +5,7 @@
 # pin is what makes a grammar change look like it did nothing.
 set -euo pipefail
 
-GRAMMAR_DIR="${1:-$(cd "$(dirname "$0")/../tree-sitter-synth" && pwd)}"
+GRAMMAR_DIR="${1:-$(cd "$(dirname "$0")/../tree-sitter-tatum" && pwd)}"
 HERE="$(cd "$(dirname "$0")" && pwd)"
 
 if [[ ! -d "$GRAMMAR_DIR/.git" ]]; then
@@ -21,7 +21,7 @@ fi
 
 REV="$(git -C "$GRAMMAR_DIR" rev-parse HEAD)"
 
-cp "$GRAMMAR_DIR"/queries/*.scm "$HERE/languages/synth/"
+cp "$GRAMMAR_DIR"/queries/*.scm "$HERE/languages/tatum/"
 /usr/bin/sed -i '' -E "s|^rev = \".*\"|rev = \"$REV\"|" "$HERE/extension.toml"
 
 echo "queries synced, grammar pinned at $REV"

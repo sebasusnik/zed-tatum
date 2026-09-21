@@ -1,5 +1,5 @@
-name = "Synth"
-grammar = "synth"
+name = "Tatum"
+grammar = "tatum"
 path_suffixes = ["synth"]
 line_comments = ["# "]
 tab_size = 4

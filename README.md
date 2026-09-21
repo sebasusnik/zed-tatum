@@ -1,21 +1,22 @@
-# zed-synth
+# zed-tatum
 
-Zed language support for the `.synth` DSL that
-[synth-core](https://github.com/sebasusnik/synth-core) plays.
+Zed language support for **Tatum**, the language that
+[synth-core](https://github.com/sebasusnik/synth-core) plays. Songs are written
+in `.synth` files.
 
 Syntax highlighting, bracket matching, auto-indent, and an outline
 (`cmd-shift-o`) of a song's modules, patterns, tracks and scenes.
 
-The parser is [tree-sitter-synth](https://github.com/sebasusnik/tree-sitter-synth). This repo is only the
+The parser is [tree-sitter-tatum](https://github.com/sebasusnik/tree-sitter-tatum). This repo is only the
 editor half: `extension.toml` says which grammar to build, and
-`languages/synth/` says how to colour it.
+`languages/tatum/` says how to colour it.
 
 ## Installing it
 
 Zed has no CLI for this, so it is a two-step from inside the editor:
 
 1. `cmd-shift-p` → **zed: install dev extension**
-2. pick this directory (`~/dev/zed-synth`)
+2. pick this directory (`~/dev/zed-tatum`)
 
 Zed clones the grammar from the URL in `extension.toml`, compiles it,
 and applies it to every `.synth` file straight away. After changing anything
@@ -23,13 +24,13 @@ here, reinstall the dev extension the same way (Zed also has a **reload
 extensions** action, which is the quicker path when it is available).
 
 The grammar is pinned by commit, and Zed caches the build per revision. So
-after changing `grammar.js` in tree-sitter-synth:
+after changing `grammar.js` in tree-sitter-tatum:
 
 ```
-cd ../tree-sitter-synth
+cd ../tree-sitter-tatum
 npx tree-sitter generate && npx tree-sitter test
 git commit -am "..."
-cd ../zed-synth
+cd ../zed-tatum
 ./sync.sh          # copies the queries over and repoints extension.toml
 ```
 
