@@ -13,4 +13,4 @@ languages = ["languages/synth"]
 # per revision, so an unchanged rev will not pick up new work.
 [grammars.synth]
 repository = "file:///Users/sebasusnik/dev/tree-sitter-synth"
-rev = "e40e84513b93ad7be1639a011d83a9966077f44b"
+rev = "2fb5f0e654c3a028d7c38ecbff5ffec29b61a32b"
