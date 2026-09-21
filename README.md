@@ -19,7 +19,8 @@ Zed has no CLI for this, so it is a two-step from inside the editor:
 
 Zed clones the grammar from the `file://` URL in `extension.toml`, compiles it,
 and applies it to every `.synth` file straight away. After changing anything
-here, run **zed: reload extensions**.
+here, reinstall the dev extension the same way (Zed also has a **reload
+extensions** action, which is the quicker path when it is available).
 
 The grammar is pinned by commit, and Zed caches the build per revision. So
 after changing `grammar.js` in tree-sitter-synth:
@@ -32,8 +33,9 @@ cd ../zed-synth
 ./sync.sh          # copies the queries over and repoints extension.toml
 ```
 
-then reload extensions in Zed. Skipping the `rev` bump is the one mistake that
-looks like "my change did nothing": Zed will happily keep the old build.
+then reinstall or reload the extension in Zed. Skipping the `rev` bump is the
+one mistake that looks like "my change did nothing": Zed will happily keep the
+old build.
 
 ## How it reads a song
 
