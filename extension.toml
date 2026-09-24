@@ -12,4 +12,4 @@ languages = ["languages/tatum"]
 # stays. sync.sh does that for you.
 [grammars.tatum]
 repository = "https://github.com/sebasusnik/tree-sitter-tatum"
-rev = "9ca60478899eb8c109c5f58cd1dd42d25664e28d"
+rev = "c266eee8f2966ed50e928c5a041157729508d08b"
